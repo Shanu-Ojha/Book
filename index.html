@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .header a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            display: flex;
+            height: calc(100vh - 50px);
+        }
+        .sidebar {
+            width: 20%;
+            background: #f4f4f4;
+            padding: 10px;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar a {
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: #ddd;
+            color: #000;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background: #aaa;
+            color: white;
+        }
+        .main-content {
+            flex: 1;
+            border-left: 1px solid #ccc;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h1>Online Bookstore</h1>
+        </div>
+        <nav>
+            <a href="description.html" target="contentFrame">Home</a>
+            <a href="login.html" target="contentFrame">Login</a>
+            <a href="register.html" target="contentFrame">Registration</a>
+            <a href="catalogue.html" target="contentFrame">Catalogue</a>
+            <a href="cart.html" target="contentFrame">Cart</a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <div class="sidebar">
+            <h3>Categories</h3>
+            <a href="cse.html" target="contentFrame">CSE</a>
+            <a href="ece.html" target="contentFrame">ECE</a>
+            <a href="eee.html" target="contentFrame">EEE</a>
+            <a href="civil.html" target="contentFrame">CIVIL</a>
+        </div>
+
+        <div class="main-content">
+            <iframe src="description.html" name="contentFrame"></iframe>
+        </div>
+    </div>
+</body>
+</html>
